@@ -12,20 +12,19 @@
     <script>
         /*3개 값 입력받고, 3 값 중에서 가장 큰 값을 찾고, 나머지 두 값의 합이 그것보다 크면 된다.*/
 
-        console.log(13, 33, 17);
-
         function triangle(a, b, c) {
-
+            console.log(a,b,c);
             let max;
             let total;
 
-            if (a > b) { max = a }
+            if (a > b && a > c) { max = a }
             else if (b > c) { max = b }
             else { max = c }
+            console.log(max);
 
             total = a + b + c;
 
-            if (max > (total - max)) {
+            if ((total - max) > max) {
                 console.log("YES");
             }
             else {
@@ -33,7 +32,7 @@
             }
             
         }
-        triangle(13,33,17);
+        triangle(30,16,16);
         
 
     </script>
