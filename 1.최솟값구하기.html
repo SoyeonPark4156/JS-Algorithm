@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    // let a = +prompt("100 미만의 정수를 입력하세요1");
+    // let b = +prompt("100 미만의 정수를 입력하세요2");
+    // let c = +prompt("100 미만의 정수를 입력하세요3");
+
+    // if(a <= b && a <= c){
+    //    console.log(a);
+    //  }
+    //  else if(b <= c){
+    //      console.log(b);
+    //  }
+    //  else{
+    //      console.log(c);
+    //  }
+     
+    let arr =[];
+
+    function getNum(){
+      
+       while(arr.length < 3) {
+        let num = +prompt("100 미만의 정수를 입력하세요");
+        numChk(num);
+
+        arr.push(num);
+       
+        if(arr.length == 3) break;
+
+     } 
+     console.log(arr);
+     }
+
+
+     function numChk(input){
+    if(input < 0 || input >= 100 ){
+        alert("잘못된 입력")
+        getNum();
+      }
+      return input;
+     }
+
+
+     function min(){
+      getNum();
+
+      [a,b,c] = arr;
+
+      let answer;
+      if(a < b && a < c) answer = a;
+      else if (b < c) answer = b;
+      else answer = c;
+
+      console.log(answer);
+
+     }
+
+     min();
+     
+    
+    // inputnum을 들어올때마다 자연수인지 체크
+    // 자연수가 맞다면 배열에 추가
+    // 그 배열에서 최솟값 찾기
+
+
+    // let arr = [a, b, c];
+    // console.log(arr);
+
+    // console.log(Math.min(...arr));
+  
+
+
+  </script>  
+</body>
+</html>
