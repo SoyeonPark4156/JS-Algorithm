@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 최솟값 구하기
+// 7개의 수가 주어지면 그 숫자 중 가장 작은 수를 출력하는 프로그램을 작성하세요.
+// ▣ 입력설명
+// 첫 번째 줄에 7개의 수가 주어진다.
+// ▣ 출력설명
+// 첫 번째 줄에 가장 작은 값을 출력한다.
+
+        let num_list = [100, 20,2,30,44,3,4]
+        let min_num = num_list[0]
+
+        for(let i = 1; i <= num_list.length; i++){
+
+            if( min_num > num_list[i]){
+                min_num = num_list[i]
+            }
+
+        }
+        console.log(min_num);
+    </script>
+</body>
+</html>
