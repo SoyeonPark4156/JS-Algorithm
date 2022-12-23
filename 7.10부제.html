@@ -23,21 +23,23 @@
 // 주어진 날짜와 자동차의 일의 자리 숫자를 보고 10부제를 위반하는 차량의 대수를 출력합니
 // 다.
 
-let date = new Date();
-let today = date.getDate();
-console.log(today);
+    let date = new Date();
+    let today = date.getDate();
+    console.log(today);
 
-let car_arr = [22, 32, 42, 41, 53, 92, 85];
-let count = 0;
+    let car_arr = [22, 32, 42, 41, 53, 92, 85];
 
-for(let i = 0; i < car_arr.length; i++){
+    let count = 0;
 
-    let car_lastnum = car_arr[i].toString().substr(1,1);
-    if((today % 10) == car_lastnum){
-        count++
+    for(let i = 0; i < car_arr.length; i++){
+
+        let car_lastnum = car_arr[i].toString().substr(1,1);
+        if((today % 10) == car_lastnum){
+            count++
+        }
     }
-}
-console.log("위반한 자동차 수 = "+ count + "대");
+    console.log("위반한 자동차 수 = "+ count + "대");
+
 </script>
 </body>
 </html>
